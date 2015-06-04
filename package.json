@@ -1,0 +1,27 @@
+{
+  "name": "@paperelectron/resume",
+  "version": "0.0.1",
+  "description": "Jim Bulkowski's <jim.b@paperelectron.com> current resume.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:JimtotheB/resume.git"
+  },
+  "bin": {
+    "jimtotheb": "cli/index.js"
+  },
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-connect": "^2.2.0",
+    "handlebars": "^3.0.3",
+    "lodash": "^3.9.3",
+    "to-markdown": "^1.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jim <jim.b@paperelectron.com> (http://paperelectron.com/)",
+  "license": "MIT"
+}
