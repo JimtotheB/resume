@@ -1,6 +1,6 @@
 {
   "name": "@paperelectron/resume",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Jim Bulkowski's <jim.b@paperelectron.com> current resume.",
   "main": "index.js",
   "repository": {
