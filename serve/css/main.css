@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'cabinbold';
+    src: url('/fonts/Cabin-Bold-webfont.eot');
+    src: url('/fonts/Cabin-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Cabin-Bold-webfont.woff2') format('woff2'),
+    url('/fonts/Cabin-Bold-webfont.woff') format('woff'),
+    url('/fonts/Cabin-Bold-webfont.ttf') format('truetype'),
+    url('/fonts/Cabin-Bold-webfont.svg#cabinbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*div {*/
+    /*border: 1px solid red;*/
+/*}*/
+body {
+    width: 8in;
+    margin: auto;
+    background-color: #c2c2c2;
+    font-size: 100%;
+}
+a {
+    color: green;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.page-container {
+    padding: .25in;
+    background-color: white;
+}
+.row-container {
+    padding: .1in;
+    /*background-color: red;*/
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+}
+
+.col-container {
+    /*background-color: blue;*/
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex1 {
+    /*background-color: darkred;*/
+    flex: 1 0 auto;
+    margin-left: .1in;
+}
+
+.flex2 {
+    /*background-color: lightcoral;*/
+    flex: 2 0 auto;
+    margin-right: .1in;
+}
+
+
+h3.mega{
+    font-family: "cabinbold";
+    font-size: 1em;
+    color: green;
+}
+
+ul {
+    color: GrayText;
+    font-size: .75em;
+    display: block;
+}
+
+ul li {
+    list-style-type: none;
+    line-height: 1.1em;
+    padding-bottom: .75em;
+}
+.column-container {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.column-container > div {
+    flex: 1 0 auto;
+    padding: 0;
+    width: 80%;
+}
+
+hr.grad {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+}
+.title {
+    font-family: "cabinbold";
+}
+.muteText {
+    color: GrayText;
+}
+.center {
+    text-align: center;
+
+}
+.inset {
+    width: 80%
+}
+
+.squish-center {
+ margin: auto;
+}
+
+.offset-right {
+    padding-left: 2em;
+}
+.callout {
+    color: green;
+}
+.page-break {
+    page-break-after: always;
+}
+
+.sm-text {
+    font-size: .5em;
+}
+.md-text {
+    font-size: .75em;
+}
+.lg-text {
+    font-size: 1em;
+}
+
+.subpage {
+    display: none;
+}
+
+@media print{
+    div .avoidBreak{
+        page-break-inside: avoid;
+    }
+    .subpage {
+        display: block;
+    }
+}

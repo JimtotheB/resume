@@ -1,0 +1,8 @@
+/node_modules/*
+.idea/
+*.off/
+*.sqlite
+*.log
+.DS_Store
+env.json
+/Data/private.json
