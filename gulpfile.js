@@ -10,7 +10,8 @@ var fs = require('fs')
 var connect = require('gulp-connect');
 var handlebars = require('handlebars');
 var helpers = require('./helpers/hb_helpers')(handlebars);
-var toMd = require('to-markdown');
+var turndown = require('turndown')
+var gfm = require('turndown-plugin-gfm').gfm
 
 var command = process.argv[2];
 var serverPort = 8080;
@@ -24,29 +25,51 @@ function writeReadme(html, cb){
       return cb(err, null)
     }
     var header = handlebars.compile(file)();
-    var md = toMd(html, {
-      gfm: true,
-      converters: [
-        {
-          filter: 'br',
-          replacement: function() {
-            return '\n\n'
-          }
-        },
-        {
-          filter: ['html', 'body', 'span', 'div'],
-          replacement: function(innerHTML) {
-            return innerHTML;
-          }
-        },
-        {
-          filter: ['head', 'script', 'style', 'meta', 'link'],
-          replacement: function() {
-            return '';
-          }
-        }
-      ]
-    });
+    var tds = new turndown()
+    tds.use(gfm)
+    tds.addRule('break', {
+      filter: 'br',
+      replacement: function() {
+        return '\n\n'
+      }
+    })
+    tds.addRule('body',{
+      filter: ['html', 'body', 'span', 'div'],
+      replacement: function(innerHTML) {
+        return innerHTML;
+      }
+    })
+
+    tds.addRule('meta', {
+      filter: ['head', 'script', 'style', 'meta', 'link'],
+      replacement: function() {
+        return '';
+      }
+    })
+    var md = tds.turndown(html)
+    // var md = toMd(html, {
+    //   gfm: true,
+    //   converters: [
+    //     {
+    //       filter: 'br',
+    //       replacement: function() {
+    //         return '\n\n'
+    //       }
+    //     },
+    //     {
+    //       filter: ['html', 'body', 'span', 'div'],
+    //       replacement: function(innerHTML) {
+    //         return innerHTML;
+    //       }
+    //     },
+    //     {
+    //       filter: ['head', 'script', 'style', 'meta', 'link'],
+    //       replacement: function() {
+    //         return '';
+    //       }
+    //     }
+    //   ]
+    // });
     var combined = header + md;
     fs.writeFile('./Readme.md', combined, {encoding: 'utf-8'}, function(err) {
       if(err){
@@ -127,4 +150,4 @@ gulp.task('watch', function(){
 buildHtml(function() {
   console.log('Building resume, please open http://localhost:'+ serverPort + ' to view.' );
 })
-gulp.task('default', ['connect', 'watch'])
+gulp.task('default', gulp.parallel('connect', 'watch'))

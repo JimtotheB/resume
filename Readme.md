@@ -25,29 +25,32 @@ $ jimtotheb --port 8000
 #### For the impatient, here it is conveniently rendered with Github flavored markdown.
 
 ***
-# Jim Bulkowski
+  
 
-\<redacted\> 
+Jim Bulkowski
+=============
 
-Lawrenceville, GA, 30043
+\\<redacted\\>
 
-tel: \<redacted\> 
+Hoschton, GA, 30548
+
+tel: \\<redacted\\>
 
 email: jim.b@paperelectron.com
 
 [https://linkedin.com/in/JimtotheB](https://linkedin.com/in/JimtotheB)
 
- [https://github.com/PaperElectron](https://github.com/PaperElectron)
+[https://github.com/PaperElectron](https://github.com/PaperElectron)
 
- [https://npmjs.com/~paperelectron](https://npmjs.com/~paperelectron)
+[https://npmjs.com/~paperelectron](https://npmjs.com/~paperelectron)
 
- [https://twitter.com/paperElectron](https://twitter.com/paperElectron)
+[https://twitter.com/paperElectron](https://twitter.com/paperElectron)
 
 * * *
 
-#### Software developer/Software project manager
+#### Cloud Systems Architecht
 
-### Five years of professional experience developing, directing and deploying complex software applications, with a prior four years experience managing multi million dollar infrastructure projects.
+### Eleven years of professional experience developing, directing and deploying complex software applications, with a prior four years experience managing multi million dollar infrastructure projects.
 
 I seek to develop innovative applications, using the best tools available, in a scalable and maintainable way. I am an expert level javascript developer with experience in several other popular languages.
 

@@ -4,6 +4,8 @@ var spawn = require('child_process').spawn
 var args = [];
 
 var command = process.argv[2];
+
+console.log(command)
 if(command === '--port') {
   (function(p) {
     if(!isNaN(parseFloat(p)) && isFinite(p)) {

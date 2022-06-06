@@ -11,13 +11,13 @@
     "jimtotheb": "cli/index.js"
   },
   "dependencies": {
-    "gulp": "^3.8.11",
-    "gulp-connect": "^2.2.0",
-    "handlebars": "^3.0.3",
-    "lodash": "^3.9.3",
-    "to-markdown": "^1.2.1"
+    "gulp": "^4.0.2",
+    "gulp-connect": "^5.7.0",
+    "handlebars": "^4.7.7",
+    "lodash": "^4.17.21",
+    "turndown": "^7.1.1",
+    "turndown-plugin-gfm": "^1.0.2"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
