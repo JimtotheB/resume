@@ -34,7 +34,7 @@ Jim Bulkowski
 
 Hoschton, GA, 30548
 
-tel: \\<redacted\\>
+tel: 216.337.6767
 
 email: jim.b@paperelectron.com
 
@@ -48,7 +48,7 @@ email: jim.b@paperelectron.com
 
 * * *
 
-#### Cloud Systems Architecht
+#### Cloud Systems Architect
 
 ### Eleven years of professional experience developing, directing and deploying complex software applications, with a prior four years experience managing multi million dollar infrastructure projects.
 
