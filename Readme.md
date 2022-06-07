@@ -2,7 +2,7 @@
 
 ### Install
 
-To view a copy of my resume in its most pristine state simply...
+To view a copy of my resume in its most pristine state simply....
 
 ```shell
 # local install
@@ -30,11 +30,11 @@ $ jimtotheb --port 8000
 Jim Bulkowski
 =============
 
-\\<redacted\\>
+\\<redacted address\\>
 
 Hoschton, GA, 30548
 
-tel: 216.337.6767
+tel: \\<redacted phone\\>
 
 email: jim.b@paperelectron.com
 
@@ -58,6 +58,16 @@ I seek to develop innovative applications, using the best tools available, in a 
 
 #### Professional experience
 
+### Lead Backend/Cloud Systems Architect
+
+##### March 2015 - Present
+
+*   Currently developing open source libraries and frameworks, primarily to support SaaS and PaaS implementations.
+*   Consulting and custom implementations with a focus on highly concurrent, scalable systems and improving build, test and deploy pipelines.
+*   Sundry - A caching, dynamically configurable reverse proxy, designed to power SaaS architecture.
+*   Magnum DI - A key value dependency injection framework that simplifies dependency management in generated code.
+*   Pomegranate - a drop in application framework written in NodeJs that incorporates multiple datasources, and values extensibility.
+
 ### Software Developer - Paper Electron LLC. Atlanta GA
 
 ##### June 2012 - Present
@@ -73,7 +83,7 @@ I seek to develop innovative applications, using the best tools available, in a 
 ##### August 2014 - March 2015
 
 *   Designed and implemented a 500+ endpoint REST api, interacting with 3 different data-sources.
-*   Designed and implemented a 50k loc front end application in AngularJS, packaged with Browserify.
+*   Designed and implemented a 50k loc front end application in AngularJS.
 *   Developed a test driven design strategy, running nearly 3000 ad hoc tests on every commit from a team of 4.
 *   Implemented and managed a SaaS platform comprised of a centralized router, credential arbitrator, service manager and docker container manager.
 *   Managed several bare metal servers running ESXi, comprising 15+ virtual machines configured with Ansible.

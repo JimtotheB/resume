@@ -129,25 +129,39 @@ function buildHtml(cb) {
   })
 }
 
-gulp.task('connect', function() {
+
+let connectServer = (cb) => {
   connect.server({
     port: serverPort,
     root: './serve',
     livereload: true
   })
-})
+  cb()
+}
+// gulp.task('connect', function() {
+//   connect.server({
+//     port: serverPort,
+//     root: './serve',
+//     livereload: true
+//   })
+// })
 
-
-gulp.task('watch', function(){
-  gulp.watch(["./Data/*.json", "./handlebars/*.hb", "./serve/css/*.css"], function(file){
-    console.log(file.path);
-    buildHtml(function(){
-      gulp.src('./serve/index.html').pipe(connect.reload())
-    })
+let buildAndReload = (cb) => {
+  buildHtml(function(){
+    gulp.src('./serve/index.html').pipe(connect.reload())
+    cb()
   })
-})
+}
+
+let watchFiles = (cb) => {
+  // gulp.watch(['./Data/*.json', './handlebars/*.hb', './serve/css/*.css'],{ ignoreInitial: false }, buildAndReload)
+  gulp.watch("./Data/*.json",{ ignoreInitial: false }, buildAndReload)
+  cb()
+}
 
 buildHtml(function() {
   console.log('Building resume, please open http://localhost:'+ serverPort + ' to view.' );
 })
-gulp.task('default', gulp.parallel('connect', 'watch'))
+
+
+exports.default = gulp.parallel(connectServer, watchFiles)

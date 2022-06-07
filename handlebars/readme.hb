@@ -2,7 +2,7 @@
 
 ### Install
 
-To view a copy of my resume in its most pristine state simply...
+To view a copy of my resume in its most pristine state simply....
 
 ```shell
 # local install
