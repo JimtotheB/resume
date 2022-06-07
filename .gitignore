@@ -6,3 +6,4 @@
 .DS_Store
 env.json
 /Data/private.json
+/serve/index.html
